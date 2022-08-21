@@ -93,6 +93,10 @@ h1{
     color: #000;
 }
 
+.padding{
+    padding: 5px 0 10px 0;
+}
+
 .search-bar{
     display: flex;
     flex-direction: row;
@@ -114,6 +118,7 @@ h1{
     font-weight: 700;
 }
 #search{
+    cursor: pointer;
     height: 35px;
     width: 35px;
     background-color: #000;

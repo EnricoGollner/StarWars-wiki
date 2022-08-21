@@ -22,6 +22,7 @@ function renderResponse(response){
                 // Subtítulo:
                 const filmSubTitle = document.createTextNode(film.subtitle)
                 const filmSubTitleElement = document.createElement('h3')
+                filmSubTitleElement.classList.add('padding')
                 filmSubTitleElement.appendChild(filmSubTitle)
                 modalContent.appendChild(filmSubTitleElement)
 
