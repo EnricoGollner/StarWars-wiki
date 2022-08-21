@@ -56,17 +56,14 @@ function hideModal() {
 }
 
 selector('#search').addEventListener('click', ()=>{
-    const searchValue = selector('.searchInput').value
-
-    fetch(`https://sevencoders-starwars-wiki.herokuapp.com/search?query=${searchValue}`)
+    const searchValue = selector('.search-input').value
+    fetch( searchValue === 0 ? // Operador ternário para caso não tenha sido buscado algo de fato, volte para a página inicial
+    'https://sevencoders-starwars-wiki.herokuapp.com/films' 
+    : `https://sevencoders-starwars-wiki.herokuapp.com/search?query=${searchValue}`)
     .then(async (data)=>{
         const response = await data.json()
-        const list = selector('#films-list')
-        list.innerHTML = ''  // Limpa os que tinham antes
-        
         renderResponse(response)
     }).catch((error)=>{
         alert("Falha ao realizar a busca")
     })
-
 })
