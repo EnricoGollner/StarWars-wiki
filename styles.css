@@ -1,9 +1,15 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
 body{
     background-color: #161616;
-    color: #fff
+    color: #fff;
 }
 
 header{
+    margin: 24px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -49,9 +55,55 @@ h1{
     background-color: #010101;
     margin-bottom: 16px;
     margin-right: 12px;
+    cursor: pointer;
 }
 
 .film-title{
     font-size: 16px;
     font-weight: bold;
+}
+
+.modal{
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.modal-content{
+    width: 50vw;
+    height: 70vh;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 12px;
+    color: #000;
+}
+
+.search-bar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 756px;
+    height: 36px;
+    background-color: #fff;
+    margin-bottom: 48px;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 12px;
+}
+.search-input{
+    border: 0;
+    width: 90%;
+    height: 100%;
+    font-size: 18px;
+    font-weight: 700;
 }
